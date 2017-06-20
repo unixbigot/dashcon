@@ -1,0 +1,13 @@
+#FROM perl
+FROM alpine:latest
+RUN apk add --no-cache wget bash make perl nodejs-current nodejs-current-npm
+RUN npm install -g prettier
+RUN wget -O - http://cpanmin.us | perl - --self-upgrade
+RUN cpanm install Modern::Perl
+RUN cpanm install JSON
+RUN cpanm install File::Slurp
+RUN cpanm install Spawn::Safe
+RUN cpanm install URI::Escape
+RUN mkdir /data
+WORKDIR /data
+CMD /data/flows.pl

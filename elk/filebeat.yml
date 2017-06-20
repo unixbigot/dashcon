@@ -1,0 +1,16 @@
+filebeat:
+  prospectors:
+    - input_type: log
+      document_type: fleetvalid_spot
+      exclude_lines: ["^#"]
+      tags: ["json"]
+      paths:
+        - spots.log
+          
+output:
+  logstash:
+    hosts: ["localhost:5044"]
+    index: logstash
+    ssl.certificate_authorities: ["logstash-beats.crt"]
+    ssl.certificate: "cert.pem"
+    ssl.key: "privkey.pem"

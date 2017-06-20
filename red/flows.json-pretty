@@ -1,0 +1,768 @@
+[
+   {
+      "label" : "Flow 1",
+      "type" : "tab",
+      "id" : "5572fdc2.805504"
+   },
+   {
+      "out" : [
+         {
+            "y" : 120,
+            "x" : 670,
+            "wires" : [
+               {
+                  "id" : "835d8204.229f08",
+                  "port" : 0
+               }
+            ]
+         }
+      ],
+      "info" : "",
+      "in" : [
+         {
+            "x" : 80,
+            "wires" : [
+               {
+                  "id" : "178549d1.2d4566"
+               }
+            ],
+            "y" : 20
+         }
+      ],
+      "type" : "subflow",
+      "name" : "Random Variable",
+      "id" : "81d0b972.c77c8"
+   },
+   {
+      "id" : "ede13430.58fe58",
+      "name" : "KPIs",
+      "icon" : "dashboard",
+      "type" : "ui_tab",
+      "z" : ""
+   },
+   {
+      "disp" : true,
+      "name" : "Membership",
+      "id" : "b07a2691.15906",
+      "tab" : "ede13430.58fe58",
+      "z" : "",
+      "width" : "6",
+      "type" : "ui_group"
+   },
+   {
+      "type" : "ui_base",
+      "theme" : {
+         "lightTheme" : {
+            "edited" : true,
+            "reset" : false,
+            "baseFont" : "Helvetica Neue",
+            "default" : "#0094CE",
+            "baseColor" : "#0094CE"
+         },
+         "customTheme" : {
+            "baseColor" : "#4B7930",
+            "default" : "#4B7930",
+            "baseFont" : "Helvetica Neue",
+            "name" : "Untitled Theme 1"
+         },
+         "name" : "theme-dark",
+         "themeState" : {
+            "group-textColor" : {
+               "edited" : false,
+               "value" : "#0eb8c0"
+            },
+            "group-backgroundColor" : {
+               "edited" : false,
+               "value" : "#333333"
+            },
+            "base-color" : {
+               "edited" : false,
+               "value" : "#097479",
+               "default" : "#097479"
+            },
+            "widget-textColor" : {
+               "value" : "#eeeeee",
+               "edited" : false
+            },
+            "group-borderColor" : {
+               "edited" : false,
+               "value" : "#555555"
+            },
+            "widget-backgroundColor" : {
+               "value" : "#097479",
+               "edited" : false
+            },
+            "page-backgroundColor" : {
+               "edited" : false,
+               "value" : "#111111"
+            },
+            "page-sidebar-backgroundColor" : {
+               "edited" : false,
+               "value" : "#000000"
+            },
+            "page-titlebar-backgroundColor" : {
+               "edited" : false,
+               "value" : "#097479"
+            },
+            "widget-borderColor" : {
+               "value" : "#333333",
+               "edited" : false
+            }
+         },
+         "darkTheme" : {
+            "baseFont" : "Helvetica Neue",
+            "default" : "#097479",
+            "baseColor" : "#097479",
+            "edited" : true,
+            "reset" : false
+         }
+      },
+      "id" : "87d9ac18.091b9",
+      "site" : {
+         "name" : "Node-RED Dashboard",
+         "sizes" : {
+            "px" : 0,
+            "gy" : 6,
+            "cx" : 6,
+            "py" : 0,
+            "sx" : 32,
+            "gx" : 6,
+            "sy" : 48,
+            "cy" : 6
+         },
+         "hideToolbar" : "false",
+         "allowSwipe" : "false",
+         "dateFormat" : "DD/MM/YYYY"
+      }
+   },
+   {
+      "order" : 2,
+      "id" : "e9f1a3d.06c966",
+      "type" : "ui_group",
+      "width" : "6",
+      "z" : "",
+      "tab" : "ede13430.58fe58",
+      "name" : "Orders",
+      "disp" : true
+   },
+   {
+      "tab" : "ede13430.58fe58",
+      "width" : "6",
+      "type" : "ui_group",
+      "z" : "",
+      "disp" : true,
+      "id" : "fe99df7.4917da",
+      "name" : "Average cart value"
+   },
+   {
+      "z" : "",
+      "type" : "ui_tab",
+      "icon" : "dashboard",
+      "name" : "Sales",
+      "id" : "1b105745.1cbbc1"
+   },
+   {
+      "name" : "1s timer",
+      "y" : 80,
+      "type" : "inject",
+      "z" : "81d0b972.c77c8",
+      "id" : "4dd5eca5.d0ad8c",
+      "payload" : "",
+      "payloadType" : "date",
+      "topic" : "",
+      "crontab" : "",
+      "wires" : [
+         [
+            "a0425c24.73d23"
+         ]
+      ],
+      "x" : 100,
+      "once" : false,
+      "repeat" : "1"
+   },
+   {
+      "y" : 80,
+      "name" : "random [-1,1]",
+      "high" : "1",
+      "z" : "81d0b972.c77c8",
+      "type" : "random",
+      "wires" : [
+         [
+            "835d8204.229f08"
+         ]
+      ],
+      "x" : 260,
+      "id" : "a0425c24.73d23",
+      "inte" : "true",
+      "low" : "-1"
+   },
+   {
+      "type" : "inject",
+      "z" : "81d0b972.c77c8",
+      "name" : "1m timer",
+      "y" : 160,
+      "repeat" : "60",
+      "once" : false,
+      "id" : "3956cb87.651fec",
+      "payload" : "",
+      "topic" : "",
+      "payloadType" : "date",
+      "wires" : [
+         [
+            "c30e2da8.ab921"
+         ]
+      ],
+      "crontab" : "",
+      "x" : 100
+   },
+   {
+      "once" : false,
+      "repeat" : "5",
+      "crontab" : "",
+      "wires" : [
+         [
+            "8ba49eae.d50ba8"
+         ]
+      ],
+      "x" : 100,
+      "payloadType" : "date",
+      "topic" : "",
+      "id" : "32424daa.91273a",
+      "payload" : "",
+      "z" : "81d0b972.c77c8",
+      "type" : "inject",
+      "y" : 120,
+      "name" : "5s timer"
+   },
+   {
+      "y" : 120,
+      "name" : "random [-5,5]",
+      "high" : "5",
+      "z" : "81d0b972.c77c8",
+      "type" : "random",
+      "wires" : [
+         [
+            "835d8204.229f08"
+         ]
+      ],
+      "x" : 260,
+      "id" : "8ba49eae.d50ba8",
+      "inte" : "true",
+      "low" : "-5"
+   },
+   {
+      "x" : 260,
+      "wires" : [
+         [
+            "835d8204.229f08"
+         ]
+      ],
+      "id" : "c30e2da8.ab921",
+      "inte" : "true",
+      "low" : "-20",
+      "y" : 160,
+      "name" : "random [-20,20]",
+      "high" : "20",
+      "type" : "random",
+      "z" : "81d0b972.c77c8"
+   },
+   {
+      "z" : "81d0b972.c77c8",
+      "type" : "function",
+      "name" : "accumulate value",
+      "y" : 120,
+      "func" : "//node.warn(util.inspect(msg));\n\n\n\nif (msg.payload === undefined) {\n    node.warn('nope');\n    return;\n}\nif (typeof(msg.payload) == \"object\") {\n    //node.warn(msg);\n    context.set('options', msg.payload);\n    return;\n}\n\nvar options = context.get('options')||{min:0, max:100};\nvar value = context.get(  'value');\nif (isNaN(value)) { \n    value = options.min + (options.max-options.min)/2;\n}\n//node.log(\"previous value: \"+value)\n//node.log(\"delta: \"+msg.payload)\nif (options.maxdelta && msg.payload > options.maxdelta) { msg.payload = options.maxdelta; }\nvalue += msg.payload;\nif (value > options.max) { value = options.max }\nif (value < options.min) { value = options.min }\ncontext.set('value', value);\nmsg.payload = Math.round(value);\nif (options.topic) { msg.topic = options.topic; }\n\n//node.log(\"Value now \"+msg.payload);\nnode.status({text:msg.payload});\nreturn msg;",
+      "noerr" : 0,
+      "outputs" : 1,
+      "id" : "835d8204.229f08",
+      "wires" : [
+         []
+      ],
+      "x" : 500
+   },
+   {
+      "removeOlderPoints" : "",
+      "y" : 80,
+      "ymin" : "0",
+      "name" : "",
+      "removeOlderUnit" : "3600",
+      "label" : "",
+      "width" : "6",
+      "type" : "ui_chart",
+      "xformat" : "HH:mm",
+      "z" : "5572fdc2.805504",
+      "legend" : "true",
+      "chartType" : "line",
+      "group" : "b07a2691.15906",
+      "wires" : [
+         [],
+         []
+      ],
+      "x" : 790,
+      "cutout" : 0,
+      "id" : "a85d46c1.7c2858",
+      "height" : "6",
+      "ymax" : "10",
+      "nodata" : "",
+      "interpolate" : "bezier",
+      "colors" : [
+         "#2CA02C",
+         "#98DF8A",
+         "#FF7F0E",
+         "#2CA02C",
+         "#98DF8A",
+         "#D62728",
+         "#FF9896",
+         "#9467BD",
+         "#C5B0D5"
+      ],
+      "order" : 2,
+      "removeOlder" : "1"
+   },
+   {
+      "type" : "ui_gauge",
+      "width" : "6",
+      "z" : "5572fdc2.805504",
+      "min" : 0,
+      "label" : "units",
+      "name" : "",
+      "y" : 40,
+      "format" : "{{value}}",
+      "height" : "3",
+      "id" : "e0b20412.f2341",
+      "group" : "b07a2691.15906",
+      "x" : 850,
+      "wires" : [],
+      "gtype" : "gage",
+      "seg2" : "",
+      "colors" : [
+         "#CA3838",
+         "#E6E600",
+         "#00B500"
+      ],
+      "max" : 10,
+      "seg1" : "",
+      "order" : 1,
+      "title" : "New Members last hour"
+   },
+   {
+      "x" : 480,
+      "wires" : [
+         [
+            "ac2efa6f.e0c28"
+         ]
+      ],
+      "y" : 40,
+      "name" : "Signups last hour",
+      "id" : "a6a421ee.b2aa8",
+      "z" : "5572fdc2.805504",
+      "type" : "subflow:81d0b972.c77c8"
+   },
+   {
+      "once" : true,
+      "repeat" : "",
+      "id" : "bb95a0ff.7810b",
+      "payload" : "",
+      "payloadType" : "date",
+      "topic" : "",
+      "x" : 100,
+      "wires" : [
+         [
+            "65fd55d0.e89eec",
+            "d89539ea.c7009",
+            "f6d099e9.f0a618",
+            "a5e69b8.3e2b468",
+            "69f1bdc9.ec464c",
+            "cbad8558.8e6e6"
+         ]
+      ],
+      "crontab" : "",
+      "type" : "inject",
+      "z" : "5572fdc2.805504",
+      "name" : "at startup",
+      "y" : 40
+   },
+   {
+      "nodata" : "",
+      "ymax" : "100",
+      "colors" : [
+         "#1F77B4",
+         "#AEC7E8",
+         "#FF7F0E",
+         "#2CA02C",
+         "#98DF8A",
+         "#D62728",
+         "#FF9896",
+         "#9467BD",
+         "#C5B0D5"
+      ],
+      "interpolate" : "bezier",
+      "removeOlder" : "1",
+      "order" : 2,
+      "name" : "",
+      "ymin" : "0",
+      "removeOlderPoints" : "",
+      "y" : 180,
+      "xformat" : "HH:mm",
+      "legend" : "true",
+      "chartType" : "line",
+      "z" : "5572fdc2.805504",
+      "width" : "6",
+      "type" : "ui_chart",
+      "label" : "",
+      "removeOlderUnit" : "3600",
+      "cutout" : 0,
+      "id" : "5595eada.c8bc24",
+      "x" : 670,
+      "wires" : [
+         [],
+         []
+      ],
+      "group" : "e9f1a3d.06c966",
+      "height" : "6"
+   },
+   {
+      "seg2" : "",
+      "colors" : [
+         "#CA3838",
+         "#E6E600",
+         "#00B500"
+      ],
+      "gtype" : "gage",
+      "max" : 10,
+      "seg1" : "",
+      "order" : 1,
+      "title" : "Orders last hour",
+      "min" : 0,
+      "label" : "units",
+      "type" : "ui_gauge",
+      "width" : "6",
+      "z" : "5572fdc2.805504",
+      "y" : 140,
+      "name" : "",
+      "height" : "3",
+      "format" : "{{value}}",
+      "group" : "e9f1a3d.06c966",
+      "x" : 700,
+      "wires" : [],
+      "id" : "439bacb2.c6da0c"
+   },
+   {
+      "x" : 480,
+      "wires" : [
+         [
+            "5595eada.c8bc24",
+            "439bacb2.c6da0c"
+         ]
+      ],
+      "y" : 140,
+      "name" : "Orders last hour",
+      "id" : "6a52339e.d2f6b4",
+      "z" : "5572fdc2.805504",
+      "type" : "subflow:81d0b972.c77c8"
+   },
+   {
+      "format" : "json",
+      "x" : 300,
+      "wires" : [
+         [
+            "a6a421ee.b2aa8"
+         ]
+      ],
+      "field" : "payload",
+      "template" : "{\"topic\": \"current\", \"min\":0, \"max\":10, \"maxdelta\": 2}",
+      "id" : "65fd55d0.e89eec",
+      "z" : "5572fdc2.805504",
+      "syntax" : "plain",
+      "type" : "template",
+      "y" : 40,
+      "fieldType" : "msg",
+      "name" : "random [0,10]"
+   },
+   {
+      "format" : "json",
+      "x" : 300,
+      "wires" : [
+         [
+            "6a52339e.d2f6b4"
+         ]
+      ],
+      "template" : "{\"topic\": \"current\", \"min\":1, \"max\":100}",
+      "id" : "d89539ea.c7009",
+      "field" : "payload",
+      "syntax" : "mustache",
+      "type" : "template",
+      "z" : "5572fdc2.805504",
+      "y" : 140,
+      "fieldType" : "msg",
+      "name" : "random [1,80]"
+   },
+   {
+      "y" : 20,
+      "x" : 260,
+      "wires" : [
+         [
+            "835d8204.229f08"
+         ]
+      ],
+      "id" : "178549d1.2d4566",
+      "name" : "Decode JSON",
+      "type" : "json",
+      "z" : "81d0b972.c77c8"
+   },
+   {
+      "z" : "5572fdc2.805504",
+      "type" : "subflow:81d0b972.c77c8",
+      "wires" : [
+         [
+            "cdb9f4ba.a44af8"
+         ]
+      ],
+      "x" : 480,
+      "y" : 80,
+      "name" : "Signups last hour",
+      "id" : "71d78c60.32f2f4"
+   },
+   {
+      "z" : "5572fdc2.805504",
+      "type" : "subflow:81d0b972.c77c8",
+      "name" : "Orders last hour",
+      "id" : "be47238d.29ddc",
+      "wires" : [
+         [
+            "5595eada.c8bc24"
+         ]
+      ],
+      "x" : 480,
+      "y" : 180
+   },
+   {
+      "field" : "payload",
+      "template" : "{\"topic\": \"last week\", \"min\":0, \"max\":10, \"maxdelta\":2}",
+      "id" : "f6d099e9.f0a618",
+      "wires" : [
+         [
+            "71d78c60.32f2f4"
+         ]
+      ],
+      "x" : 300,
+      "format" : "json",
+      "fieldType" : "msg",
+      "name" : "random [0,10]",
+      "y" : 80,
+      "z" : "5572fdc2.805504",
+      "syntax" : "mustache",
+      "type" : "template"
+   },
+   {
+      "format" : "json",
+      "x" : 300,
+      "wires" : [
+         [
+            "be47238d.29ddc"
+         ]
+      ],
+      "field" : "payload",
+      "id" : "a5e69b8.3e2b468",
+      "template" : "{\"topic\": \"last week\", \"min\":1, \"max\":100}",
+      "z" : "5572fdc2.805504",
+      "type" : "template",
+      "syntax" : "mustache",
+      "y" : 180,
+      "fieldType" : "msg",
+      "name" : "random [20,100]"
+   },
+   {
+      "id" : "ac2efa6f.e0c28",
+      "action" : "mean",
+      "wires" : [
+         [
+            "e0b20412.f2341",
+            "a85d46c1.7c2858"
+         ]
+      ],
+      "x" : 660,
+      "z" : "5572fdc2.805504",
+      "type" : "smooth",
+      "count" : "300",
+      "round" : "0",
+      "name" : "",
+      "y" : 40
+   },
+   {
+      "x" : 660,
+      "wires" : [
+         [
+            "a85d46c1.7c2858"
+         ]
+      ],
+      "action" : "mean",
+      "id" : "cdb9f4ba.a44af8",
+      "y" : 80,
+      "name" : "",
+      "count" : "300",
+      "round" : "0",
+      "type" : "smooth",
+      "z" : "5572fdc2.805504"
+   },
+   {
+      "removeOlder" : "1",
+      "order" : 2,
+      "interpolate" : "bezier",
+      "colors" : [
+         "#9467BD",
+         "#C5B0D5",
+         "#FF7F0E",
+         "#2CA02C",
+         "#98DF8A",
+         "#D62728",
+         "#FF9896",
+         "#9467BD",
+         ""
+      ],
+      "ymax" : "100",
+      "nodata" : "",
+      "height" : "6",
+      "id" : "55bcec5b.dfa2dc",
+      "cutout" : 0,
+      "group" : "fe99df7.4917da",
+      "x" : 810,
+      "wires" : [
+         [],
+         []
+      ],
+      "width" : "6",
+      "type" : "ui_chart",
+      "z" : "5572fdc2.805504",
+      "xformat" : "HH:mm",
+      "legend" : "true",
+      "chartType" : "line",
+      "removeOlderUnit" : "3600",
+      "label" : "",
+      "name" : "",
+      "y" : 280,
+      "removeOlderPoints" : "",
+      "ymin" : "0"
+   },
+   {
+      "title" : "Average cart value",
+      "seg1" : "",
+      "order" : 1,
+      "max" : 10,
+      "seg2" : "",
+      "colors" : [
+         "#CA3838",
+         "#E6E600",
+         "#00B500"
+      ],
+      "gtype" : "gage",
+      "group" : "fe99df7.4917da",
+      "wires" : [],
+      "x" : 850,
+      "id" : "a575174d.c41908",
+      "height" : "3",
+      "format" : "${{value}}",
+      "y" : 240,
+      "name" : "",
+      "label" : "units",
+      "min" : 0,
+      "width" : "6",
+      "type" : "ui_gauge",
+      "z" : "5572fdc2.805504"
+   },
+   {
+      "z" : "5572fdc2.805504",
+      "type" : "subflow:81d0b972.c77c8",
+      "x" : 490,
+      "wires" : [
+         [
+            "810d6b23.e5c62"
+         ]
+      ],
+      "y" : 240,
+      "name" : "Average Cart Value",
+      "id" : "ab577be1.0de0a"
+   },
+   {
+      "y" : 240,
+      "fieldType" : "msg",
+      "name" : "random [8,75]",
+      "type" : "template",
+      "syntax" : "mustache",
+      "z" : "5572fdc2.805504",
+      "x" : 300,
+      "wires" : [
+         [
+            "ab577be1.0de0a"
+         ]
+      ],
+      "template" : "{\"topic\": \"current\", \"min\":8, \"max\":75}",
+      "id" : "69f1bdc9.ec464c",
+      "field" : "payload",
+      "format" : "json"
+   },
+   {
+      "name" : "Average Cart Value",
+      "id" : "aeb2d3e1.dbb3e",
+      "wires" : [
+         [
+            "922333f1.09e728"
+         ]
+      ],
+      "x" : 490,
+      "y" : 280,
+      "z" : "5572fdc2.805504",
+      "type" : "subflow:81d0b972.c77c8"
+   },
+   {
+      "format" : "json",
+      "wires" : [
+         [
+            "aeb2d3e1.dbb3e"
+         ]
+      ],
+      "x" : 300,
+      "field" : "payload",
+      "id" : "cbad8558.8e6e6",
+      "template" : "{\"topic\": \"last week\", \"min\":8, \"max\":75}",
+      "z" : "5572fdc2.805504",
+      "type" : "template",
+      "syntax" : "mustache",
+      "y" : 280,
+      "name" : "random [1,50]",
+      "fieldType" : "msg"
+   },
+   {
+      "type" : "smooth",
+      "z" : "5572fdc2.805504",
+      "count" : "600",
+      "round" : "2",
+      "name" : "",
+      "y" : 240,
+      "action" : "mean",
+      "id" : "810d6b23.e5c62",
+      "wires" : [
+         [
+            "a575174d.c41908",
+            "55bcec5b.dfa2dc"
+         ]
+      ],
+      "x" : 660
+   },
+   {
+      "name" : "",
+      "y" : 280,
+      "z" : "5572fdc2.805504",
+      "type" : "smooth",
+      "round" : "2",
+      "count" : "600",
+      "id" : "922333f1.09e728",
+      "action" : "mean",
+      "x" : 660,
+      "wires" : [
+         [
+            "55bcec5b.dfa2dc"
+         ]
+      ]
+   }
+]

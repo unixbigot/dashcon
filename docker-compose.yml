@@ -1,0 +1,24 @@
+version: "3"
+services:
+  elk:
+    container_name: elk
+    build:
+      dockerfile: elk/Dockerfile
+      context: .
+    ports:
+      - "5959:5959"
+      - "5959:5959/udp"
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+    volumes:
+      - $PWD/elk/logstash_conf.d:/etc/logstash/conf.d
+  red:
+    container_name: red
+    build:
+      dockerfile: red/Dockerfile
+      context: .
+    ports:
+      - 1880:1880
+    volumes:
+      - $PWD/red/flows.json:/data/flows.json
