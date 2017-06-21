@@ -1,0 +1,16 @@
+FROM alpine:latest
+RUN apk add --no-cache curl wget bash make perl gcc musl-dev perl-dev
+RUN curl http://cpanmin.us | perl - --self-upgrade
+RUN cpanm install Modern::Perl
+RUN cpanm install JSON
+RUN cpanm install File::Slurp
+RUN cpanm install Math::Random
+RUN cpanm install Spawn::Safe
+RUN cpanm install URI::Escape
+RUN mkdir /filebeat
+WORKDIR /filebeat
+RUN curl -k https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.4.2-linux-x86_64.tar.gz | tar zxvf -
+RUN mv /filebeat/*/* /filebeat
+RUN mkdir /data
+WORKDIR /data
+CMD fakelogs.pl
