@@ -1,96 +1,141 @@
 [
    {
-      "label" : "Flow 1",
-      "type" : "tab",
-      "id" : "5572fdc2.805504"
+      "id" : "5572fdc2.805504",
+      "label" : "NodeRed KPI Dashboard",
+      "type" : "tab"
    },
    {
-      "out" : [
-         {
-            "y" : 120,
-            "x" : 670,
-            "wires" : [
-               {
-                  "id" : "835d8204.229f08",
-                  "port" : 0
-               }
-            ]
-         }
-      ],
-      "info" : "",
+      "id" : "26f99f95.0128a",
+      "label" : "Blynk Error dashboard",
+      "type" : "tab"
+   },
+   {
+      "id" : "2dc4bf99.2d10d",
+      "label" : "App Review Response",
+      "type" : "tab"
+   },
+   {
+      "id" : "fbaba14a.420718",
+      "label" : "Social Media Monitor",
+      "type" : "tab"
+   },
+   {
+      "id" : "4338b44.680e04c",
+      "label" : "Trend-based alerting",
+      "type" : "tab"
+   },
+   {
+      "id" : "7bc275b1.21064c",
+      "label" : "Dashboard testing",
+      "type" : "tab"
+   },
+   {
+      "id" : "90ab103f.0f76f",
+      "label" : "Server Replica burnin test",
+      "type" : "tab"
+   },
+   {
+      "id" : "81d0b972.c77c8",
       "in" : [
          {
-            "x" : 80,
             "wires" : [
                {
                   "id" : "178549d1.2d4566"
                }
             ],
+            "x" : 80,
             "y" : 20
          }
       ],
-      "type" : "subflow",
+      "info" : "",
       "name" : "Random Variable",
-      "id" : "81d0b972.c77c8"
+      "out" : [
+         {
+            "wires" : [
+               {
+                  "id" : "835d8204.229f08",
+                  "port" : 0
+               }
+            ],
+            "x" : 670,
+            "y" : 120
+         }
+      ],
+      "type" : "subflow"
    },
    {
+      "icon" : "dashboard",
       "id" : "ede13430.58fe58",
       "name" : "KPIs",
-      "icon" : "dashboard",
       "type" : "ui_tab",
       "z" : ""
    },
    {
       "disp" : true,
-      "name" : "Membership",
       "id" : "b07a2691.15906",
+      "name" : "Membership",
       "tab" : "ede13430.58fe58",
-      "z" : "",
+      "type" : "ui_group",
       "width" : "6",
-      "type" : "ui_group"
+      "z" : ""
    },
    {
-      "type" : "ui_base",
+      "id" : "87d9ac18.091b9",
+      "site" : {
+         "allowSwipe" : "false",
+         "dateFormat" : "DD/MM/YYYY",
+         "hideToolbar" : "false",
+         "name" : "Node-RED Dashboard",
+         "sizes" : {
+            "cx" : 6,
+            "cy" : 6,
+            "gx" : 6,
+            "gy" : 6,
+            "px" : 0,
+            "py" : 0,
+            "sx" : 32,
+            "sy" : 48
+         }
+      },
       "theme" : {
-         "lightTheme" : {
-            "edited" : true,
-            "reset" : false,
-            "baseFont" : "Helvetica Neue",
-            "default" : "#0094CE",
-            "baseColor" : "#0094CE"
-         },
          "customTheme" : {
             "baseColor" : "#4B7930",
-            "default" : "#4B7930",
             "baseFont" : "Helvetica Neue",
+            "default" : "#4B7930",
             "name" : "Untitled Theme 1"
+         },
+         "darkTheme" : {
+            "baseColor" : "#097479",
+            "baseFont" : "Helvetica Neue",
+            "default" : "#097479",
+            "edited" : true,
+            "reset" : false
+         },
+         "lightTheme" : {
+            "baseColor" : "#0094CE",
+            "baseFont" : "Helvetica Neue",
+            "default" : "#0094CE",
+            "edited" : true,
+            "reset" : false
          },
          "name" : "theme-dark",
          "themeState" : {
-            "group-textColor" : {
+            "base-color" : {
+               "default" : "#097479",
                "edited" : false,
-               "value" : "#0eb8c0"
+               "value" : "#097479"
             },
             "group-backgroundColor" : {
                "edited" : false,
                "value" : "#333333"
             },
-            "base-color" : {
-               "edited" : false,
-               "value" : "#097479",
-               "default" : "#097479"
-            },
-            "widget-textColor" : {
-               "value" : "#eeeeee",
-               "edited" : false
-            },
             "group-borderColor" : {
                "edited" : false,
                "value" : "#555555"
             },
-            "widget-backgroundColor" : {
-               "value" : "#097479",
-               "edited" : false
+            "group-textColor" : {
+               "edited" : false,
+               "value" : "#0eb8c0"
             },
             "page-backgroundColor" : {
                "edited" : false,
@@ -104,87 +149,81 @@
                "edited" : false,
                "value" : "#097479"
             },
+            "widget-backgroundColor" : {
+               "edited" : false,
+               "value" : "#097479"
+            },
             "widget-borderColor" : {
-               "value" : "#333333",
-               "edited" : false
+               "edited" : false,
+               "value" : "#333333"
+            },
+            "widget-textColor" : {
+               "edited" : false,
+               "value" : "#eeeeee"
             }
-         },
-         "darkTheme" : {
-            "baseFont" : "Helvetica Neue",
-            "default" : "#097479",
-            "baseColor" : "#097479",
-            "edited" : true,
-            "reset" : false
          }
       },
-      "id" : "87d9ac18.091b9",
-      "site" : {
-         "name" : "Node-RED Dashboard",
-         "sizes" : {
-            "px" : 0,
-            "gy" : 6,
-            "cx" : 6,
-            "py" : 0,
-            "sx" : 32,
-            "gx" : 6,
-            "sy" : 48,
-            "cy" : 6
-         },
-         "hideToolbar" : "false",
-         "allowSwipe" : "false",
-         "dateFormat" : "DD/MM/YYYY"
-      }
+      "type" : "ui_base"
    },
    {
-      "order" : 2,
+      "disp" : true,
       "id" : "e9f1a3d.06c966",
+      "name" : "Orders",
+      "order" : 2,
+      "tab" : "ede13430.58fe58",
       "type" : "ui_group",
       "width" : "6",
-      "z" : "",
-      "tab" : "ede13430.58fe58",
-      "name" : "Orders",
-      "disp" : true
+      "z" : ""
    },
    {
-      "tab" : "ede13430.58fe58",
-      "width" : "6",
-      "type" : "ui_group",
-      "z" : "",
       "disp" : true,
       "id" : "fe99df7.4917da",
-      "name" : "Average cart value"
+      "name" : "Average cart value",
+      "tab" : "ede13430.58fe58",
+      "type" : "ui_group",
+      "width" : "6",
+      "z" : ""
    },
    {
-      "z" : "",
-      "type" : "ui_tab",
       "icon" : "dashboard",
+      "id" : "1b105745.1cbbc1",
       "name" : "Sales",
-      "id" : "1b105745.1cbbc1"
+      "type" : "ui_tab",
+      "z" : ""
    },
    {
-      "name" : "1s timer",
-      "y" : 80,
-      "type" : "inject",
-      "z" : "81d0b972.c77c8",
+      "id" : "653c35c.7a990cc",
+      "key" : "6a5a4b501c0e4d608f14c2a3e8dea50d",
+      "name" : "DashCon Demo",
+      "path" : "ws://blynk-cloud.com:8082/websocket",
+      "type" : "blynk-websockets-client",
+      "z" : ""
+   },
+   {
+      "crontab" : "",
       "id" : "4dd5eca5.d0ad8c",
+      "name" : "1s timer",
+      "once" : false,
       "payload" : "",
       "payloadType" : "date",
+      "repeat" : "1",
       "topic" : "",
-      "crontab" : "",
+      "type" : "inject",
       "wires" : [
          [
             "a0425c24.73d23"
          ]
       ],
       "x" : 100,
-      "once" : false,
-      "repeat" : "1"
+      "y" : 80,
+      "z" : "81d0b972.c77c8"
    },
    {
-      "y" : 80,
-      "name" : "random [-1,1]",
       "high" : "1",
-      "z" : "81d0b972.c77c8",
+      "id" : "a0425c24.73d23",
+      "inte" : "true",
+      "low" : "-1",
+      "name" : "random [-1,1]",
       "type" : "random",
       "wires" : [
          [
@@ -192,119 +231,95 @@
          ]
       ],
       "x" : 260,
-      "id" : "a0425c24.73d23",
-      "inte" : "true",
-      "low" : "-1"
+      "y" : 80,
+      "z" : "81d0b972.c77c8"
    },
    {
-      "type" : "inject",
-      "z" : "81d0b972.c77c8",
-      "name" : "1m timer",
-      "y" : 160,
-      "repeat" : "60",
-      "once" : false,
+      "crontab" : "",
       "id" : "3956cb87.651fec",
+      "name" : "1m timer",
+      "once" : false,
       "payload" : "",
-      "topic" : "",
       "payloadType" : "date",
+      "repeat" : "60",
+      "topic" : "",
+      "type" : "inject",
       "wires" : [
          [
             "c30e2da8.ab921"
          ]
       ],
-      "crontab" : "",
-      "x" : 100
+      "x" : 100,
+      "y" : 160,
+      "z" : "81d0b972.c77c8"
    },
    {
-      "once" : false,
-      "repeat" : "5",
       "crontab" : "",
+      "id" : "32424daa.91273a",
+      "name" : "5s timer",
+      "once" : false,
+      "payload" : "",
+      "payloadType" : "date",
+      "repeat" : "5",
+      "topic" : "",
+      "type" : "inject",
       "wires" : [
          [
             "8ba49eae.d50ba8"
          ]
       ],
       "x" : 100,
-      "payloadType" : "date",
-      "topic" : "",
-      "id" : "32424daa.91273a",
-      "payload" : "",
-      "z" : "81d0b972.c77c8",
-      "type" : "inject",
       "y" : 120,
-      "name" : "5s timer"
-   },
-   {
-      "y" : 120,
-      "name" : "random [-5,5]",
-      "high" : "5",
-      "z" : "81d0b972.c77c8",
-      "type" : "random",
-      "wires" : [
-         [
-            "835d8204.229f08"
-         ]
-      ],
-      "x" : 260,
-      "id" : "8ba49eae.d50ba8",
-      "inte" : "true",
-      "low" : "-5"
-   },
-   {
-      "x" : 260,
-      "wires" : [
-         [
-            "835d8204.229f08"
-         ]
-      ],
-      "id" : "c30e2da8.ab921",
-      "inte" : "true",
-      "low" : "-20",
-      "y" : 160,
-      "name" : "random [-20,20]",
-      "high" : "20",
-      "type" : "random",
       "z" : "81d0b972.c77c8"
    },
    {
-      "z" : "81d0b972.c77c8",
-      "type" : "function",
-      "name" : "accumulate value",
-      "y" : 120,
-      "func" : "//node.warn(util.inspect(msg));\n\n\n\nif (msg.payload === undefined) {\n    node.warn('nope');\n    return;\n}\nif (typeof(msg.payload) == \"object\") {\n    //node.warn(msg);\n    context.set('options', msg.payload);\n    return;\n}\n\nvar options = context.get('options')||{min:0, max:100};\nvar value = context.get(  'value');\nif (isNaN(value)) { \n    value = options.min + (options.max-options.min)/2;\n}\n//node.log(\"previous value: \"+value)\n//node.log(\"delta: \"+msg.payload)\nif (options.maxdelta && msg.payload > options.maxdelta) { msg.payload = options.maxdelta; }\nvalue += msg.payload;\nif (value > options.max) { value = options.max }\nif (value < options.min) { value = options.min }\ncontext.set('value', value);\nmsg.payload = Math.round(value);\nif (options.topic) { msg.topic = options.topic; }\n\n//node.log(\"Value now \"+msg.payload);\nnode.status({text:msg.payload});\nreturn msg;",
-      "noerr" : 0,
-      "outputs" : 1,
-      "id" : "835d8204.229f08",
+      "high" : "5",
+      "id" : "8ba49eae.d50ba8",
+      "inte" : "true",
+      "low" : "-5",
+      "name" : "random [-5,5]",
+      "type" : "random",
       "wires" : [
-         []
+         [
+            "835d8204.229f08"
+         ]
       ],
-      "x" : 500
+      "x" : 260,
+      "y" : 120,
+      "z" : "81d0b972.c77c8"
    },
    {
-      "removeOlderPoints" : "",
-      "y" : 80,
-      "ymin" : "0",
-      "name" : "",
-      "removeOlderUnit" : "3600",
-      "label" : "",
-      "width" : "6",
-      "type" : "ui_chart",
-      "xformat" : "HH:mm",
-      "z" : "5572fdc2.805504",
-      "legend" : "true",
-      "chartType" : "line",
-      "group" : "b07a2691.15906",
+      "high" : "20",
+      "id" : "c30e2da8.ab921",
+      "inte" : "true",
+      "low" : "-20",
+      "name" : "random [-20,20]",
+      "type" : "random",
       "wires" : [
-         [],
+         [
+            "835d8204.229f08"
+         ]
+      ],
+      "x" : 260,
+      "y" : 160,
+      "z" : "81d0b972.c77c8"
+   },
+   {
+      "func" : "//node.warn(util.inspect(msg));\n\n\n\nif (msg.payload === undefined) {\n    node.warn('nope');\n    return;\n}\nif (typeof(msg.payload) == \"object\") {\n    //node.warn(msg);\n    context.set('options', msg.payload);\n    return;\n}\n\nvar options = context.get('options')||{min:0, max:100};\nvar value = context.get(  'value');\nif (isNaN(value)) { \n    value = options.min + (options.max-options.min)/2;\n}\n//node.log(\"previous value: \"+value)\n//node.log(\"delta: \"+msg.payload)\nif (options.maxdelta && msg.payload > options.maxdelta) { msg.payload = options.maxdelta; }\nvalue += msg.payload;\nif (value > options.max) { value = options.max }\nif (value < options.min) { value = options.min }\ncontext.set('value', value);\nmsg.payload = Math.round(value);\nif (options.topic) { msg.topic = options.topic; }\n\n//node.log(\"Value now \"+msg.payload);\nnode.status({text:msg.payload});\nreturn msg;",
+      "id" : "835d8204.229f08",
+      "name" : "accumulate value",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
          []
       ],
-      "x" : 790,
-      "cutout" : 0,
-      "id" : "a85d46c1.7c2858",
-      "height" : "6",
-      "ymax" : "10",
-      "nodata" : "",
-      "interpolate" : "bezier",
+      "x" : 500,
+      "y" : 120,
+      "z" : "81d0b972.c77c8"
+   },
+   {
+      "chartType" : "line",
       "colors" : [
          "#2CA02C",
          "#98DF8A",
@@ -316,56 +331,81 @@
          "#9467BD",
          "#C5B0D5"
       ],
+      "cutout" : 0,
+      "group" : "b07a2691.15906",
+      "height" : "6",
+      "id" : "a85d46c1.7c2858",
+      "interpolate" : "bezier",
+      "label" : "",
+      "legend" : "true",
+      "name" : "",
+      "nodata" : "",
       "order" : 2,
-      "removeOlder" : "1"
+      "removeOlder" : "1",
+      "removeOlderPoints" : "",
+      "removeOlderUnit" : "3600",
+      "type" : "ui_chart",
+      "width" : "6",
+      "wires" : [
+         [],
+         []
+      ],
+      "x" : 790,
+      "xformat" : "HH:mm",
+      "y" : 80,
+      "ymax" : "10",
+      "ymin" : "0",
+      "z" : "5572fdc2.805504"
    },
    {
-      "type" : "ui_gauge",
-      "width" : "6",
-      "z" : "5572fdc2.805504",
-      "min" : 0,
-      "label" : "units",
-      "name" : "",
-      "y" : 40,
-      "format" : "{{value}}",
-      "height" : "3",
-      "id" : "e0b20412.f2341",
-      "group" : "b07a2691.15906",
-      "x" : 850,
-      "wires" : [],
-      "gtype" : "gage",
-      "seg2" : "",
       "colors" : [
          "#CA3838",
          "#E6E600",
          "#00B500"
       ],
+      "format" : "{{value}}",
+      "group" : "b07a2691.15906",
+      "gtype" : "gage",
+      "height" : "3",
+      "id" : "e0b20412.f2341",
+      "label" : "units",
       "max" : 10,
-      "seg1" : "",
+      "min" : 0,
+      "name" : "",
       "order" : 1,
-      "title" : "New Members last hour"
+      "seg1" : "",
+      "seg2" : "",
+      "title" : "New Members last hour",
+      "type" : "ui_gauge",
+      "width" : "6",
+      "wires" : [],
+      "x" : 850,
+      "y" : 40,
+      "z" : "5572fdc2.805504"
    },
    {
-      "x" : 480,
+      "id" : "a6a421ee.b2aa8",
+      "name" : "Signups last hour",
+      "type" : "subflow:81d0b972.c77c8",
       "wires" : [
          [
             "ac2efa6f.e0c28"
          ]
       ],
+      "x" : 480,
       "y" : 40,
-      "name" : "Signups last hour",
-      "id" : "a6a421ee.b2aa8",
-      "z" : "5572fdc2.805504",
-      "type" : "subflow:81d0b972.c77c8"
+      "z" : "5572fdc2.805504"
    },
    {
-      "once" : true,
-      "repeat" : "",
+      "crontab" : "",
       "id" : "bb95a0ff.7810b",
+      "name" : "at startup",
+      "once" : true,
       "payload" : "",
       "payloadType" : "date",
+      "repeat" : "",
       "topic" : "",
-      "x" : 100,
+      "type" : "inject",
       "wires" : [
          [
             "65fd55d0.e89eec",
@@ -376,15 +416,12 @@
             "cbad8558.8e6e6"
          ]
       ],
-      "crontab" : "",
-      "type" : "inject",
-      "z" : "5572fdc2.805504",
-      "name" : "at startup",
-      "y" : 40
+      "x" : 100,
+      "y" : 40,
+      "z" : "5572fdc2.805504"
    },
    {
-      "nodata" : "",
-      "ymax" : "100",
+      "chartType" : "line",
       "colors" : [
          "#1F77B4",
          "#AEC7E8",
@@ -396,122 +433,124 @@
          "#9467BD",
          "#C5B0D5"
       ],
-      "interpolate" : "bezier",
-      "removeOlder" : "1",
-      "order" : 2,
-      "name" : "",
-      "ymin" : "0",
-      "removeOlderPoints" : "",
-      "y" : 180,
-      "xformat" : "HH:mm",
-      "legend" : "true",
-      "chartType" : "line",
-      "z" : "5572fdc2.805504",
-      "width" : "6",
-      "type" : "ui_chart",
-      "label" : "",
-      "removeOlderUnit" : "3600",
       "cutout" : 0,
+      "group" : "e9f1a3d.06c966",
+      "height" : "6",
       "id" : "5595eada.c8bc24",
-      "x" : 670,
+      "interpolate" : "bezier",
+      "label" : "",
+      "legend" : "true",
+      "name" : "",
+      "nodata" : "",
+      "order" : 2,
+      "removeOlder" : "1",
+      "removeOlderPoints" : "",
+      "removeOlderUnit" : "3600",
+      "type" : "ui_chart",
+      "width" : "6",
       "wires" : [
          [],
          []
       ],
-      "group" : "e9f1a3d.06c966",
-      "height" : "6"
+      "x" : 670,
+      "xformat" : "HH:mm",
+      "y" : 180,
+      "ymax" : "100",
+      "ymin" : "0",
+      "z" : "5572fdc2.805504"
    },
    {
-      "seg2" : "",
       "colors" : [
          "#CA3838",
          "#E6E600",
          "#00B500"
       ],
-      "gtype" : "gage",
-      "max" : 10,
-      "seg1" : "",
-      "order" : 1,
-      "title" : "Orders last hour",
-      "min" : 0,
-      "label" : "units",
-      "type" : "ui_gauge",
-      "width" : "6",
-      "z" : "5572fdc2.805504",
-      "y" : 140,
-      "name" : "",
-      "height" : "3",
       "format" : "{{value}}",
       "group" : "e9f1a3d.06c966",
-      "x" : 700,
+      "gtype" : "gage",
+      "height" : "3",
+      "id" : "439bacb2.c6da0c",
+      "label" : "units",
+      "max" : 10,
+      "min" : 0,
+      "name" : "",
+      "order" : 1,
+      "seg1" : "",
+      "seg2" : "",
+      "title" : "Orders last hour",
+      "type" : "ui_gauge",
+      "width" : "6",
       "wires" : [],
-      "id" : "439bacb2.c6da0c"
+      "x" : 700,
+      "y" : 140,
+      "z" : "5572fdc2.805504"
    },
    {
-      "x" : 480,
+      "id" : "6a52339e.d2f6b4",
+      "name" : "Orders last hour",
+      "type" : "subflow:81d0b972.c77c8",
       "wires" : [
          [
             "5595eada.c8bc24",
             "439bacb2.c6da0c"
          ]
       ],
+      "x" : 480,
       "y" : 140,
-      "name" : "Orders last hour",
-      "id" : "6a52339e.d2f6b4",
-      "z" : "5572fdc2.805504",
-      "type" : "subflow:81d0b972.c77c8"
+      "z" : "5572fdc2.805504"
    },
    {
+      "field" : "payload",
+      "fieldType" : "msg",
       "format" : "json",
-      "x" : 300,
+      "id" : "65fd55d0.e89eec",
+      "name" : "random [0,10]",
+      "syntax" : "plain",
+      "template" : "{\"topic\": \"current\", \"min\":0, \"max\":10, \"maxdelta\": 2}",
+      "type" : "template",
       "wires" : [
          [
             "a6a421ee.b2aa8"
          ]
       ],
-      "field" : "payload",
-      "template" : "{\"topic\": \"current\", \"min\":0, \"max\":10, \"maxdelta\": 2}",
-      "id" : "65fd55d0.e89eec",
-      "z" : "5572fdc2.805504",
-      "syntax" : "plain",
-      "type" : "template",
+      "x" : 300,
       "y" : 40,
-      "fieldType" : "msg",
-      "name" : "random [0,10]"
+      "z" : "5572fdc2.805504"
    },
    {
+      "field" : "payload",
+      "fieldType" : "msg",
       "format" : "json",
-      "x" : 300,
+      "id" : "d89539ea.c7009",
+      "name" : "random [1,80]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"current\", \"min\":1, \"max\":100}",
+      "type" : "template",
       "wires" : [
          [
             "6a52339e.d2f6b4"
          ]
       ],
-      "template" : "{\"topic\": \"current\", \"min\":1, \"max\":100}",
-      "id" : "d89539ea.c7009",
-      "field" : "payload",
-      "syntax" : "mustache",
-      "type" : "template",
-      "z" : "5572fdc2.805504",
+      "x" : 300,
       "y" : 140,
-      "fieldType" : "msg",
-      "name" : "random [1,80]"
+      "z" : "5572fdc2.805504"
    },
    {
-      "y" : 20,
-      "x" : 260,
+      "id" : "178549d1.2d4566",
+      "name" : "Decode JSON",
+      "type" : "json",
       "wires" : [
          [
             "835d8204.229f08"
          ]
       ],
-      "id" : "178549d1.2d4566",
-      "name" : "Decode JSON",
-      "type" : "json",
+      "x" : 260,
+      "y" : 20,
       "z" : "81d0b972.c77c8"
    },
    {
-      "z" : "5572fdc2.805504",
+      "id" : "71d78c60.32f2f4",
+      "name" : "Signups last hour",
       "type" : "subflow:81d0b972.c77c8",
       "wires" : [
          [
@@ -520,61 +559,64 @@
       ],
       "x" : 480,
       "y" : 80,
-      "name" : "Signups last hour",
-      "id" : "71d78c60.32f2f4"
+      "z" : "5572fdc2.805504"
    },
    {
-      "z" : "5572fdc2.805504",
-      "type" : "subflow:81d0b972.c77c8",
-      "name" : "Orders last hour",
       "id" : "be47238d.29ddc",
+      "name" : "Orders last hour",
+      "type" : "subflow:81d0b972.c77c8",
       "wires" : [
          [
             "5595eada.c8bc24"
          ]
       ],
       "x" : 480,
-      "y" : 180
+      "y" : 180,
+      "z" : "5572fdc2.805504"
    },
    {
       "field" : "payload",
-      "template" : "{\"topic\": \"last week\", \"min\":0, \"max\":10, \"maxdelta\":2}",
+      "fieldType" : "msg",
+      "format" : "json",
       "id" : "f6d099e9.f0a618",
+      "name" : "random [0,10]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"last week\", \"min\":0, \"max\":10, \"maxdelta\":2}",
+      "type" : "template",
       "wires" : [
          [
             "71d78c60.32f2f4"
          ]
       ],
       "x" : 300,
-      "format" : "json",
-      "fieldType" : "msg",
-      "name" : "random [0,10]",
       "y" : 80,
-      "z" : "5572fdc2.805504",
-      "syntax" : "mustache",
-      "type" : "template"
+      "z" : "5572fdc2.805504"
    },
    {
+      "field" : "payload",
+      "fieldType" : "msg",
       "format" : "json",
-      "x" : 300,
+      "id" : "a5e69b8.3e2b468",
+      "name" : "random [20,100]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"last week\", \"min\":1, \"max\":100}",
+      "type" : "template",
       "wires" : [
          [
             "be47238d.29ddc"
          ]
       ],
-      "field" : "payload",
-      "id" : "a5e69b8.3e2b468",
-      "template" : "{\"topic\": \"last week\", \"min\":1, \"max\":100}",
-      "z" : "5572fdc2.805504",
-      "type" : "template",
-      "syntax" : "mustache",
+      "x" : 300,
       "y" : 180,
-      "fieldType" : "msg",
-      "name" : "random [20,100]"
+      "z" : "5572fdc2.805504"
    },
    {
-      "id" : "ac2efa6f.e0c28",
       "action" : "mean",
+      "count" : "300",
+      "id" : "ac2efa6f.e0c28",
+      "name" : "",
+      "round" : "0",
+      "type" : "smooth",
       "wires" : [
          [
             "e0b20412.f2341",
@@ -582,33 +624,27 @@
          ]
       ],
       "x" : 660,
-      "z" : "5572fdc2.805504",
-      "type" : "smooth",
-      "count" : "300",
-      "round" : "0",
-      "name" : "",
-      "y" : 40
+      "y" : 40,
+      "z" : "5572fdc2.805504"
    },
    {
-      "x" : 660,
+      "action" : "mean",
+      "count" : "300",
+      "id" : "cdb9f4ba.a44af8",
+      "name" : "",
+      "round" : "0",
+      "type" : "smooth",
       "wires" : [
          [
             "a85d46c1.7c2858"
          ]
       ],
-      "action" : "mean",
-      "id" : "cdb9f4ba.a44af8",
+      "x" : 660,
       "y" : 80,
-      "name" : "",
-      "count" : "300",
-      "round" : "0",
-      "type" : "smooth",
       "z" : "5572fdc2.805504"
    },
    {
-      "removeOlder" : "1",
-      "order" : 2,
-      "interpolate" : "bezier",
+      "chartType" : "line",
       "colors" : [
          "#9467BD",
          "#C5B0D5",
@@ -620,90 +656,93 @@
          "#9467BD",
          ""
       ],
-      "ymax" : "100",
-      "nodata" : "",
-      "height" : "6",
-      "id" : "55bcec5b.dfa2dc",
       "cutout" : 0,
       "group" : "fe99df7.4917da",
-      "x" : 810,
+      "height" : "6",
+      "id" : "55bcec5b.dfa2dc",
+      "interpolate" : "bezier",
+      "label" : "",
+      "legend" : "true",
+      "name" : "",
+      "nodata" : "",
+      "order" : 2,
+      "removeOlder" : "1",
+      "removeOlderPoints" : "",
+      "removeOlderUnit" : "3600",
+      "type" : "ui_chart",
+      "width" : "6",
       "wires" : [
          [],
          []
       ],
-      "width" : "6",
-      "type" : "ui_chart",
-      "z" : "5572fdc2.805504",
+      "x" : 810,
       "xformat" : "HH:mm",
-      "legend" : "true",
-      "chartType" : "line",
-      "removeOlderUnit" : "3600",
-      "label" : "",
-      "name" : "",
       "y" : 280,
-      "removeOlderPoints" : "",
-      "ymin" : "0"
+      "ymax" : "100",
+      "ymin" : "0",
+      "z" : "5572fdc2.805504"
    },
    {
-      "title" : "Average cart value",
-      "seg1" : "",
-      "order" : 1,
-      "max" : 10,
-      "seg2" : "",
       "colors" : [
          "#CA3838",
          "#E6E600",
          "#00B500"
       ],
-      "gtype" : "gage",
+      "format" : "${{value}}",
       "group" : "fe99df7.4917da",
+      "gtype" : "gage",
+      "height" : "3",
+      "id" : "a575174d.c41908",
+      "label" : "units",
+      "max" : 10,
+      "min" : 0,
+      "name" : "",
+      "order" : 1,
+      "seg1" : "",
+      "seg2" : "",
+      "title" : "Average cart value",
+      "type" : "ui_gauge",
+      "width" : "6",
       "wires" : [],
       "x" : 850,
-      "id" : "a575174d.c41908",
-      "height" : "3",
-      "format" : "${{value}}",
       "y" : 240,
-      "name" : "",
-      "label" : "units",
-      "min" : 0,
-      "width" : "6",
-      "type" : "ui_gauge",
       "z" : "5572fdc2.805504"
    },
    {
-      "z" : "5572fdc2.805504",
+      "id" : "ab577be1.0de0a",
+      "name" : "Average Cart Value",
       "type" : "subflow:81d0b972.c77c8",
-      "x" : 490,
       "wires" : [
          [
             "810d6b23.e5c62"
          ]
       ],
+      "x" : 490,
       "y" : 240,
-      "name" : "Average Cart Value",
-      "id" : "ab577be1.0de0a"
+      "z" : "5572fdc2.805504"
    },
    {
-      "y" : 240,
+      "field" : "payload",
       "fieldType" : "msg",
+      "format" : "json",
+      "id" : "69f1bdc9.ec464c",
       "name" : "random [8,75]",
-      "type" : "template",
       "syntax" : "mustache",
-      "z" : "5572fdc2.805504",
-      "x" : 300,
+      "template" : "{\"topic\": \"current\", \"min\":8, \"max\":75}",
+      "type" : "template",
       "wires" : [
          [
             "ab577be1.0de0a"
          ]
       ],
-      "template" : "{\"topic\": \"current\", \"min\":8, \"max\":75}",
-      "id" : "69f1bdc9.ec464c",
-      "field" : "payload",
-      "format" : "json"
+      "x" : 300,
+      "y" : 240,
+      "z" : "5572fdc2.805504"
    },
    {
-      "name" : "Average Cart Value",
       "id" : "aeb2d3e1.dbb3e",
+      "name" : "Average Cart Value",
+      "type" : "subflow:81d0b972.c77c8",
       "wires" : [
          [
             "922333f1.09e728"
@@ -711,58 +750,1275 @@
       ],
       "x" : 490,
       "y" : 280,
-      "z" : "5572fdc2.805504",
-      "type" : "subflow:81d0b972.c77c8"
+      "z" : "5572fdc2.805504"
    },
    {
+      "field" : "payload",
+      "fieldType" : "msg",
       "format" : "json",
+      "id" : "cbad8558.8e6e6",
+      "name" : "random [1,50]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"last week\", \"min\":8, \"max\":75}",
+      "type" : "template",
       "wires" : [
          [
             "aeb2d3e1.dbb3e"
          ]
       ],
       "x" : 300,
-      "field" : "payload",
-      "id" : "cbad8558.8e6e6",
-      "template" : "{\"topic\": \"last week\", \"min\":8, \"max\":75}",
-      "z" : "5572fdc2.805504",
-      "type" : "template",
-      "syntax" : "mustache",
       "y" : 280,
-      "name" : "random [1,50]",
-      "fieldType" : "msg"
+      "z" : "5572fdc2.805504"
    },
    {
-      "type" : "smooth",
-      "z" : "5572fdc2.805504",
-      "count" : "600",
-      "round" : "2",
-      "name" : "",
-      "y" : 240,
       "action" : "mean",
+      "count" : "600",
       "id" : "810d6b23.e5c62",
+      "name" : "",
+      "round" : "2",
+      "type" : "smooth",
       "wires" : [
          [
             "a575174d.c41908",
             "55bcec5b.dfa2dc"
          ]
       ],
-      "x" : 660
+      "x" : 660,
+      "y" : 240,
+      "z" : "5572fdc2.805504"
    },
    {
-      "name" : "",
-      "y" : 280,
-      "z" : "5572fdc2.805504",
-      "type" : "smooth",
-      "round" : "2",
+      "action" : "mean",
       "count" : "600",
       "id" : "922333f1.09e728",
-      "action" : "mean",
-      "x" : 660,
+      "name" : "",
+      "round" : "2",
+      "type" : "smooth",
       "wires" : [
          [
             "55bcec5b.dfa2dc"
          ]
-      ]
+      ],
+      "x" : 660,
+      "y" : 280,
+      "z" : "5572fdc2.805504"
+   },
+   {
+      "id" : "5eeba4d4.6f203c",
+      "name" : "Orders Pending",
+      "type" : "subflow:81d0b972.c77c8",
+      "wires" : [
+         [
+            "e9d96edb.c1fad"
+         ]
+      ],
+      "x" : 460,
+      "y" : 60,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "crontab" : "",
+      "id" : "78454d1a.892a2c",
+      "name" : "at startup",
+      "once" : true,
+      "payload" : "",
+      "payloadType" : "date",
+      "repeat" : "",
+      "topic" : "",
+      "type" : "inject",
+      "wires" : [
+         [
+            "ba9c581f.803d7",
+            "4e9398dd.9ee36",
+            "43ce462d.ca935",
+            "1d61d5a0.359c02",
+            "ae230485.aded88"
+         ]
+      ],
+      "x" : 90,
+      "y" : 60,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "id" : "bef3c369.d9a868",
+      "name" : "Warn 15m",
+      "type" : "subflow:81d0b972.c77c8",
+      "wires" : [
+         [
+            "33468a15.32e516"
+         ]
+      ],
+      "x" : 450,
+      "y" : 140,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "json",
+      "id" : "ba9c581f.803d7",
+      "name" : "random [0,10]",
+      "syntax" : "plain",
+      "template" : "{\"topic\": \"current\", \"min\":0, \"max\":10, \"maxdelta\": 2}",
+      "type" : "template",
+      "wires" : [
+         [
+            "5eeba4d4.6f203c"
+         ]
+      ],
+      "x" : 290,
+      "y" : 60,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "json",
+      "id" : "4e9398dd.9ee36",
+      "name" : "random [1,100]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"errors 15m\", \"min\":1, \"max\":100}",
+      "type" : "template",
+      "wires" : [
+         [
+            "bef3c369.d9a868"
+         ]
+      ],
+      "x" : 280,
+      "y" : 140,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "id" : "e4c71685.ce875",
+      "name" : "Errors 15m",
+      "type" : "subflow:81d0b972.c77c8",
+      "wires" : [
+         [
+            "4fb59019.5beb2"
+         ]
+      ],
+      "x" : 450,
+      "y" : 100,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "id" : "e5ca4c7d.a3a2d8",
+      "name" : "API hits",
+      "type" : "subflow:81d0b972.c77c8",
+      "wires" : [
+         [
+            "749909a7.5cb8c8",
+            "38996c96.2917bc"
+         ]
+      ],
+      "x" : 500,
+      "y" : 200,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "json",
+      "id" : "43ce462d.ca935",
+      "name" : "random [0,50]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"errors 15m\", \"min\":0, \"max\":50, \"maxdelta\":2}",
+      "type" : "template",
+      "wires" : [
+         [
+            "e4c71685.ce875"
+         ]
+      ],
+      "x" : 290,
+      "y" : 100,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "json",
+      "id" : "1d61d5a0.359c02",
+      "name" : "random [4000,10000]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"api hits\", \"min\":4000, \"max\":10000}",
+      "type" : "template",
+      "wires" : [
+         [
+            "e5ca4c7d.a3a2d8"
+         ]
+      ],
+      "x" : 310,
+      "y" : 200,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "id" : "7b671d1c.ac07d4",
+      "name" : "API Errors",
+      "type" : "subflow:81d0b972.c77c8",
+      "wires" : [
+         [
+            "749909a7.5cb8c8",
+            "f4cbac3e.6097b"
+         ]
+      ],
+      "x" : 500,
+      "y" : 240,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "json",
+      "id" : "ae230485.aded88",
+      "name" : "random [0,1000]",
+      "syntax" : "mustache",
+      "template" : "{\"topic\": \"api errors\", \"min\":0, \"max\":1000}",
+      "type" : "template",
+      "wires" : [
+         [
+            "7b671d1c.ac07d4"
+         ]
+      ],
+      "x" : 320,
+      "y" : 240,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "func" : "if (msg.topic == \"API hits\") {\n    context.set(\"hits\", msg.payload)\n}\nif (msg.topic == \"API errors\") {\n    context.set(\"errors\", msg.payload)\n}\nvar hits = context.get(\"hits\")\nvar errors = context.get(\"errors\")\nif (hits === undefined || errors === undefined) return null;\nreturn {topic: \"api error rate\", payload:100*errors/hits};\n",
+      "id" : "749909a7.5cb8c8",
+      "name" : "Calculate api error rate",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
+         [
+            "b19e2961.81527"
+         ]
+      ],
+      "x" : 630,
+      "y" : 300,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "client" : "653c35c.7a990cc",
+      "id" : "4fb59019.5beb2",
+      "name" : "ERRORS 15min (v7)",
+      "pin" : "7",
+      "type" : "blynk-websockets-out-write",
+      "wires" : [],
+      "x" : 660,
+      "y" : 100,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "client" : "653c35c.7a990cc",
+      "id" : "e9d96edb.c1fad",
+      "name" : "orders pending (v6)",
+      "pin" : "6",
+      "type" : "blynk-websockets-out-write",
+      "wires" : [],
+      "x" : 650,
+      "y" : 60,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "client" : "653c35c.7a990cc",
+      "id" : "33468a15.32e516",
+      "name" : "WARN 15min (v8)",
+      "pin" : "8",
+      "type" : "blynk-websockets-out-write",
+      "wires" : [],
+      "x" : 670,
+      "y" : 140,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "client" : "653c35c.7a990cc",
+      "id" : "38996c96.2917bc",
+      "name" : "HTTP OK 15min (10)",
+      "pin" : "10",
+      "type" : "blynk-websockets-out-write",
+      "wires" : [],
+      "x" : 700,
+      "y" : 200,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "client" : "653c35c.7a990cc",
+      "id" : "f4cbac3e.6097b",
+      "name" : "HTTP ERR (v11)",
+      "pin" : "11",
+      "type" : "blynk-websockets-out-write",
+      "wires" : [],
+      "x" : 680,
+      "y" : 240,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "client" : "653c35c.7a990cc",
+      "id" : "b19e2961.81527",
+      "name" : "HTTP ERROR RATE 15min (v9)",
+      "pin" : "9",
+      "type" : "blynk-websockets-out-write",
+      "wires" : [],
+      "x" : 890,
+      "y" : 300,
+      "z" : "26f99f95.0128a"
+   },
+   {
+      "appid" : "WidgetWorld App",
+      "country" : "AU",
+      "id" : "72148087.62ee58",
+      "name" : "WidgetWorld App Reviews",
+      "pollinginterval" : 30,
+      "type" : "appstore",
+      "wires" : [
+         [
+            "cd509779.57fcc8",
+            "de048501.fe5338"
+         ]
+      ],
+      "x" : 130,
+      "y" : 60,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "checkall" : "true",
+      "id" : "cd509779.57fcc8",
+      "name" : "One or Five Stars",
+      "outputs" : 2,
+      "property" : "payload.rating",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "eq",
+            "v" : "1",
+            "vt" : "str"
+         },
+         {
+            "t" : "eq",
+            "v" : "5",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "9429e256.eb2478"
+         ],
+         [
+            "525246e5.8c8cb"
+         ]
+      ],
+      "x" : 370,
+      "y" : 60,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "id" : "de048501.fe5338",
+      "name" : "Analyse Review Text",
+      "type" : "sentiment",
+      "wires" : [
+         [
+            "f7f919ac.08458"
+         ]
+      ],
+      "x" : 140,
+      "y" : 260,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "dname" : "by email",
+      "id" : "30b6c15d.446716",
+      "name" : "support@example.com",
+      "port" : "465",
+      "server" : "smtp.gmail.com",
+      "type" : "e-mail",
+      "wires" : [],
+      "x" : 500,
+      "y" : 120,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "handlebars",
+      "id" : "9429e256.eb2478",
+      "name" : "Notify support of one-star review",
+      "syntax" : "mustache",
+      "template" : "Dear support,\n\nThe WidgetWorld app received the below one-star\nreview.  Please follow up with with the customer\nand make their day wonderful.\n\nThis is the review: {{payload}} !",
+      "type" : "template",
+      "wires" : [
+         [
+            "30b6c15d.446716"
+         ]
+      ],
+      "x" : 260,
+      "y" : 120,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "handlebars",
+      "id" : "525246e5.8c8cb",
+      "name" : "Crow about a five star review",
+      "syntax" : "mustache",
+      "template" : "Thanks {{payload.name}} for giving WidgetWorld App Five Stars!",
+      "type" : "template",
+      "wires" : [
+         [
+            "444c7fb7.fcead"
+         ]
+      ],
+      "x" : 280,
+      "y" : 180,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "id" : "444c7fb7.fcead",
+      "name" : "on Twitter",
+      "twitter" : "",
+      "type" : "twitter out",
+      "wires" : [],
+      "x" : 500,
+      "y" : 180,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "checkall" : "true",
+      "id" : "f7f919ac.08458",
+      "name" : "Exceedingly bad review",
+      "outputs" : 1,
+      "property" : "sentiment.score",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "lt",
+            "v" : "-3",
+            "vt" : "num"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "20a9016d.a2bbbe"
+         ]
+      ],
+      "x" : 410,
+      "y" : 260,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "device" : "",
+      "id" : "20a9016d.a2bbbe",
+      "name" : "Alert the head of marketing",
+      "priority" : 0,
+      "sound" : "",
+      "title" : "",
+      "type" : "pushover",
+      "url" : "",
+      "url_title" : "",
+      "wires" : [],
+      "x" : 420,
+      "y" : 340,
+      "z" : "2dc4bf99.2d10d"
+   },
+   {
+      "id" : "16c03bc4.17ad84",
+      "inputs" : 0,
+      "name" : "Listen for WidgetWorld twitter mentions",
+      "tags" : "",
+      "topic" : "tweets",
+      "twitter" : "",
+      "type" : "twitter in",
+      "user" : "event",
+      "wires" : [
+         [
+            "84a7c3b0.9e50f8",
+            "c6bc3f02.ba4c7"
+         ]
+      ],
+      "x" : 190,
+      "y" : 60,
+      "z" : "fbaba14a.420718"
+   },
+   {
+      "checkall" : "false",
+      "id" : "84a7c3b0.9e50f8",
+      "name" : "Detect users with questions",
+      "outputs" : 2,
+      "property" : "payload",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "case" : false,
+            "t" : "regex",
+            "v" : "hey @widgetworld.*how",
+            "vt" : "str"
+         },
+         {
+            "t" : "cont",
+            "v" : "?",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "b5e85efb.328ca8"
+         ],
+         [
+            "b5e85efb.328ca8"
+         ]
+      ],
+      "x" : 300,
+      "y" : 140,
+      "z" : "fbaba14a.420718"
+   },
+   {
+      "id" : "c6bc3f02.ba4c7",
+      "name" : "Analyse sentiment",
+      "type" : "sentiment",
+      "wires" : [
+         [
+            "f5db27bc.6d2878"
+         ]
+      ],
+      "x" : 150,
+      "y" : 300,
+      "z" : "fbaba14a.420718"
+   },
+   {
+      "dname" : "Open support ticket",
+      "id" : "b5e85efb.328ca8",
+      "name" : "ticket@example.com",
+      "port" : "465",
+      "server" : "smtp.gmail.com",
+      "type" : "e-mail",
+      "wires" : [],
+      "x" : 320,
+      "y" : 200,
+      "z" : "fbaba14a.420718"
+   },
+   {
+      "checkall" : "true",
+      "id" : "f5db27bc.6d2878",
+      "name" : "Abusive user",
+      "outputs" : 1,
+      "property" : "sentiment.score",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "lte",
+            "v" : "-2",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "a1bc8af5.88432"
+         ]
+      ],
+      "x" : 350,
+      "y" : 340,
+      "z" : "fbaba14a.420718"
+   },
+   {
+      "dname" : "Forward to head of customer care",
+      "id" : "a1bc8af5.88432",
+      "name" : "head_of_support@example.com",
+      "port" : "465",
+      "server" : "smtp.gmail.com",
+      "type" : "e-mail",
+      "wires" : [],
+      "x" : 280,
+      "y" : 400,
+      "z" : "fbaba14a.420718"
+   },
+   {
+      "documentIndex" : "",
+      "documentType" : "",
+      "id" : "f5d1cb91.1e75d8",
+      "includeFields" : "",
+      "maxResults" : 10,
+      "name" : "from Elasticsearch",
+      "query" : "",
+      "server" : "",
+      "sort" : "",
+      "type" : "es-search",
+      "wires" : [
+         [
+            "e66dc6c4.2efec8"
+         ]
+      ],
+      "x" : 450,
+      "y" : 120,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "crontab" : "",
+      "id" : "6409f389.abc4e4",
+      "name" : "Every 30 minutes",
+      "once" : false,
+      "payload" : "",
+      "payloadType" : "date",
+      "repeat" : "",
+      "topic" : "",
+      "type" : "inject",
+      "wires" : [
+         [
+            "f34040a7.d3f17"
+         ]
+      ],
+      "x" : 160,
+      "y" : 60,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "handlebars",
+      "id" : "f34040a7.d3f17",
+      "name" : "Get recent payment outcomes",
+      "syntax" : "mustache",
+      "template" : "This is the payload: {{payload}} !",
+      "type" : "template",
+      "wires" : [
+         [
+            "f5d1cb91.1e75d8"
+         ]
+      ],
+      "x" : 190,
+      "y" : 120,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "func" : "\nreturn msg;",
+      "id" : "e66dc6c4.2efec8",
+      "name" : "Analyse trend",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
+         [
+            "5e34a910.25d708"
+         ]
+      ],
+      "x" : 140,
+      "y" : 180,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "checkall" : "true",
+      "id" : "5e34a910.25d708",
+      "name" : "if up >50% over last 4 hours",
+      "outputs" : 1,
+      "property" : "payload",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "eq",
+            "v" : "",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "cb172b75.fd4c88"
+         ]
+      ],
+      "x" : 420,
+      "y" : 180,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "device" : "",
+      "id" : "cb172b75.fd4c88",
+      "name" : "Page the payments team",
+      "priority" : 0,
+      "sound" : "",
+      "title" : "",
+      "type" : "pushover",
+      "url" : "",
+      "url_title" : "",
+      "wires" : [],
+      "x" : 430,
+      "y" : 240,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "documentIndex" : "",
+      "documentType" : "",
+      "id" : "57cffa5a.e6fa2c",
+      "includeFields" : "",
+      "maxResults" : 10,
+      "name" : "from Elasticsearch",
+      "query" : "",
+      "server" : "",
+      "sort" : "",
+      "type" : "es-search",
+      "wires" : [
+         [
+            "72e1d2d3.0cecd4"
+         ]
+      ],
+      "x" : 450,
+      "y" : 360,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "crontab" : "",
+      "id" : "9cd1bb88.a58bc",
+      "name" : "Every 5 minutes",
+      "once" : false,
+      "payload" : "",
+      "payloadType" : "date",
+      "repeat" : "",
+      "topic" : "",
+      "type" : "inject",
+      "wires" : [
+         [
+            "6d74d283.0c908c"
+         ]
+      ],
+      "x" : 160,
+      "y" : 300,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "handlebars",
+      "id" : "6d74d283.0c908c",
+      "name" : "Get server load status summary",
+      "syntax" : "mustache",
+      "template" : "This is the payload: {{payload}} !",
+      "type" : "template",
+      "wires" : [
+         [
+            "57cffa5a.e6fa2c"
+         ]
+      ],
+      "x" : 190,
+      "y" : 360,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "checkall" : "true",
+      "id" : "99ac41bb.a203e",
+      "name" : "and server count above highwater",
+      "outputs" : 1,
+      "property" : "payload",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "eq",
+            "v" : "",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "e7ea9072.0b8de",
+            "1b275e7b.f570aa"
+         ]
+      ],
+      "x" : 440,
+      "y" : 420,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "checkall" : "true",
+      "id" : "72e1d2d3.0cecd4",
+      "name" : "if average load over 80%",
+      "outputs" : 1,
+      "property" : "payload",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "eq",
+            "v" : "",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "99ac41bb.a203e"
+         ]
+      ],
+      "x" : 170,
+      "y" : 420,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "broker" : "",
+      "id" : "e7ea9072.0b8de",
+      "name" : "Activate low-complexity page layout",
+      "qos" : "",
+      "retain" : "",
+      "topic" : "",
+      "type" : "mqtt out",
+      "wires" : [],
+      "x" : 430,
+      "y" : 480,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "device" : "",
+      "id" : "1b275e7b.f570aa",
+      "name" : "Page the SRE team",
+      "priority" : 0,
+      "sound" : "",
+      "title" : "",
+      "type" : "pushover",
+      "url" : "",
+      "url_title" : "",
+      "wires" : [],
+      "x" : 450,
+      "y" : 540,
+      "z" : "4338b44.680e04c"
+   },
+   {
+      "id" : "94a5caf7.8b4bd8",
+      "info" : "",
+      "name" : "Build your BI pipeline around source, analyse, render",
+      "type" : "comment",
+      "wires" : [],
+      "x" : 250,
+      "y" : 60,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "documentIndex" : "",
+      "documentType" : "",
+      "id" : "d03cd3f4.289b58",
+      "includeFields" : "",
+      "maxResults" : 10,
+      "name" : "Gather real data",
+      "query" : "",
+      "server" : "",
+      "sort" : "",
+      "type" : "es-search",
+      "wires" : [
+         [
+            "edfcd9ad.1b7cf8"
+         ]
+      ],
+      "x" : 140,
+      "y" : 180,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "group" : "b07a2691.15906",
+      "height" : 0,
+      "id" : "5a019683.cf5d38",
+      "label" : "",
+      "name" : "Choose stub data, Stub analysis or live",
+      "options" : [
+         {
+            "label" : "",
+            "type" : "str",
+            "value" : ""
+         }
+      ],
+      "order" : 0,
+      "passthru" : true,
+      "payload" : "",
+      "place" : "Select option",
+      "topic" : "",
+      "type" : "ui_dropdown",
+      "width" : 0,
+      "wires" : [
+         [
+            "be8fdbac.19683"
+         ]
+      ],
+      "x" : 220,
+      "y" : 120,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "func" : "\nreturn msg;",
+      "id" : "be8fdbac.19683",
+      "name" : "Save choice",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
+         []
+      ],
+      "x" : 500,
+      "y" : 120,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "handlebars",
+      "id" : "7201dca7.60b24c",
+      "name" : "Generate stub data",
+      "syntax" : "mustache",
+      "template" : "This is the payload: {{payload}} !",
+      "type" : "template",
+      "wires" : [
+         [
+            "edfcd9ad.1b7cf8"
+         ]
+      ],
+      "x" : 150,
+      "y" : 220,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "func" : "\nreturn msg;",
+      "id" : "edfcd9ad.1b7cf8",
+      "name" : "Choose real or stub data",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
+         [
+            "21b88c6b.013e1c"
+         ]
+      ],
+      "x" : 410,
+      "y" : 180,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "field" : "payload",
+      "fieldType" : "msg",
+      "format" : "handlebars",
+      "id" : "f283ab04.81b59",
+      "name" : "Generate stub analysis",
+      "syntax" : "mustache",
+      "template" : "This is the payload: {{payload}} !",
+      "type" : "template",
+      "wires" : [
+         [
+            "21b88c6b.013e1c"
+         ]
+      ],
+      "x" : 160,
+      "y" : 280,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "func" : "\nreturn msg;",
+      "id" : "21b88c6b.013e1c",
+      "name" : "Choose real or stub analysis",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
+         [
+            "ea3d3eef.98a818"
+         ]
+      ],
+      "x" : 420,
+      "y" : 280,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "chartType" : "line",
+      "colors" : [
+         "#1F77B4",
+         "#AEC7E8",
+         "#FF7F0E",
+         "#2CA02C",
+         "#98DF8A",
+         "#D62728",
+         "#FF9896",
+         "#9467BD",
+         "#C5B0D5"
+      ],
+      "cutout" : 0,
+      "height" : 0,
+      "id" : "ea3d3eef.98a818",
+      "interpolate" : "linear",
+      "label" : "chart",
+      "legend" : "false",
+      "name" : "",
+      "nodata" : "",
+      "order" : 0,
+      "removeOlder" : 1,
+      "removeOlderPoints" : "",
+      "removeOlderUnit" : "3600",
+      "type" : "ui_chart",
+      "width" : 0,
+      "wires" : [
+         [],
+         []
+      ],
+      "x" : 640,
+      "xformat" : "HH:mm:ss",
+      "y" : 280,
+      "ymax" : "",
+      "ymin" : "",
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "broker" : "",
+      "id" : "490c1f89.9ff968",
+      "name" : "Listen for new webserver",
+      "qos" : "2",
+      "topic" : "",
+      "type" : "mqtt in",
+      "wires" : [
+         [
+            "d876c791.2d0a1"
+         ]
+      ],
+      "x" : 150,
+      "y" : 80,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "addpay" : true,
+      "append" : "",
+      "command" : "",
+      "id" : "d876c791.2d0a1",
+      "name" : "Trigger gatling test",
+      "timer" : "",
+      "type" : "exec",
+      "useSpawn" : "",
+      "wires" : [
+         [
+            "c49847c6.297eb8",
+            "267e81a0.bf5be6"
+         ],
+         [],
+         []
+      ],
+      "x" : 400,
+      "y" : 80,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "addpay" : true,
+      "append" : "",
+      "command" : "",
+      "id" : "c49847c6.297eb8",
+      "name" : "Confirm expected log entries are seen",
+      "timer" : "",
+      "type" : "exec",
+      "useSpawn" : "",
+      "wires" : [
+         [],
+         [],
+         []
+      ],
+      "x" : 460,
+      "y" : 160,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "documentIndex" : "",
+      "documentType" : "",
+      "id" : "267e81a0.bf5be6",
+      "includeFields" : "",
+      "maxResults" : 10,
+      "name" : "Look for event records",
+      "query" : "",
+      "server" : "",
+      "sort" : "",
+      "type" : "es-search",
+      "wires" : [
+         [
+            "c8e04471.9cac6"
+         ]
+      ],
+      "x" : 190,
+      "y" : 220,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "checkall" : "true",
+      "id" : "c8e04471.9cac6",
+      "name" : "Saw expected events",
+      "outputs" : 1,
+      "property" : "payload",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "eq",
+            "v" : "",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "190a9caf.c4c433"
+         ]
+      ],
+      "x" : 510,
+      "y" : 220,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "addpay" : true,
+      "append" : "",
+      "command" : "",
+      "id" : "190a9caf.c4c433",
+      "name" : "Confirm expected alerts were triggered",
+      "timer" : "",
+      "type" : "exec",
+      "useSpawn" : "",
+      "wires" : [
+         [
+            "2e8dbf5d.8c6018",
+            "61662972.152848"
+         ],
+         [],
+         []
+      ],
+      "x" : 470,
+      "y" : 300,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "broker" : "",
+      "id" : "2e8dbf5d.8c6018",
+      "name" : "Add server to load pool",
+      "qos" : "",
+      "retain" : "",
+      "topic" : "",
+      "type" : "mqtt out",
+      "wires" : [],
+      "x" : 510,
+      "y" : 420,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "broker" : "",
+      "id" : "61662972.152848",
+      "name" : "enable alert delivery",
+      "qos" : "",
+      "retain" : "",
+      "topic" : "",
+      "type" : "mqtt out",
+      "wires" : [],
+      "x" : 520,
+      "y" : 380,
+      "z" : "90ab103f.0f76f"
+   },
+   {
+      "crontab" : "",
+      "id" : "d0afedb.0141b1",
+      "name" : "At instantiation of CI environment",
+      "once" : false,
+      "payload" : "",
+      "payloadType" : "date",
+      "repeat" : "",
+      "topic" : "",
+      "type" : "inject",
+      "wires" : [
+         [
+            "1d3cd7d3.45789"
+         ]
+      ],
+      "x" : 190,
+      "y" : 400,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "addpay" : true,
+      "append" : "",
+      "command" : "",
+      "id" : "1d3cd7d3.45789",
+      "name" : "Initiate 100 known user-journeys",
+      "timer" : "",
+      "type" : "exec",
+      "useSpawn" : "",
+      "wires" : [
+         [
+            "5d3d03a0.d29854"
+         ],
+         [],
+         []
+      ],
+      "x" : 190,
+      "y" : 460,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "func" : "\nreturn msg;",
+      "id" : "5d3d03a0.d29854",
+      "name" : "Examine dashboard",
+      "noerr" : 0,
+      "outputs" : 1,
+      "type" : "function",
+      "wires" : [
+         [
+            "e49c28eb.68d62"
+         ]
+      ],
+      "x" : 160,
+      "y" : 520,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "checkall" : "true",
+      "id" : "e49c28eb.68d62",
+      "name" : "Confirm expected metric values",
+      "outputs" : 2,
+      "property" : "payload",
+      "propertyType" : "msg",
+      "rules" : [
+         {
+            "t" : "eq",
+            "v" : "",
+            "vt" : "str"
+         },
+         {
+            "t" : "eq",
+            "v" : "",
+            "vt" : "str"
+         }
+      ],
+      "type" : "switch",
+      "wires" : [
+         [
+            "688ada19.6ef8cc"
+         ],
+         [
+            "20defc6f.103344"
+         ]
+      ],
+      "x" : 190,
+      "y" : 580,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "broker" : "",
+      "id" : "688ada19.6ef8cc",
+      "name" : "test pass",
+      "qos" : "",
+      "retain" : "",
+      "topic" : "",
+      "type" : "mqtt out",
+      "wires" : [],
+      "x" : 420,
+      "y" : 540,
+      "z" : "7bc275b1.21064c"
+   },
+   {
+      "broker" : "",
+      "id" : "20defc6f.103344",
+      "name" : "test fail",
+      "qos" : "",
+      "retain" : "",
+      "topic" : "",
+      "type" : "mqtt out",
+      "wires" : [],
+      "x" : 420,
+      "y" : 600,
+      "z" : "7bc275b1.21064c"
    }
 ]

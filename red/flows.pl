@@ -8,9 +8,10 @@ use URI::Escape;
 
 # Read in the flow configuration file and interpet it as JSON
 #
-my $codec = JSON->new;
+my $codec = JSON->new->canonical(1);
 my $input = $ARGV[0]//'flows.json';
 my $json = $codec->decode(read_file $input);
+
 
 #
 # Iterate over the nodes looking for function nodes, and write
