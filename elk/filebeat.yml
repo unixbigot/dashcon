@@ -1,7 +1,7 @@
 filebeat:
   prospectors:
     - input_type: log
-      document_type: fleetvalid_spot
+      document_type: traffic_spot
       exclude_lines: ["^#"]
       tags: ["json"]
       paths:
@@ -11,6 +11,6 @@ output:
   logstash:
     hosts: ["localhost:5044"]
     index: logstash
-    ssl.certificate_authorities: ["logstash-beats.crt"]
-    ssl.certificate: "cert.pem"
-    ssl.key: "privkey.pem"
+    #ssl.certificate_authorities: ["shout-out-to-letsencrypt.crt"]
+    #ssl.certificate: "cert.pem"
+    #ssl.key: "privkey.pem"
