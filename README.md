@@ -1,5 +1,10 @@
 # Continuous Dashboarding example
 
+This repository provides resources to help you get started with the data
+exploration tactics which I speak about in my presentation "Continuous Dashboarding".
+
+You can find slides and video of my presentations on my website: http://christopher.biggs.id.au/#talks
+
 ## Using the docker-compose file
 
 **ELK and Node-RED**:
